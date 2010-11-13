@@ -1,5 +1,5 @@
 %define upstream_name    Test-ConsistentVersion
-%define upstream_version v0.2.2
+%define upstream_version v0.2.3
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
