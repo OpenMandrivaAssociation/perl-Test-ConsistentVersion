@@ -48,3 +48,18 @@ rm -rf %buildroot
 %perl_vendorlib/*
 
 
+
+
+%changelog
+* Sat Apr 23 2011 Funda Wang <fwang@mandriva.org> 0.2.3-2mdv2011.0
++ Revision: 656970
+- rebuild for updated spec-helper
+
+* Sat Nov 13 2010 Jérôme Quelin <jquelin@mandriva.org> 0.2.3-1mdv2011.0
++ Revision: 597202
+- update to v0.2.3
+
+* Wed Aug 25 2010 Jérôme Quelin <jquelin@mandriva.org> 0.2.2-1mdv2011.0
++ Revision: 573126
+- import perl-Test-ConsistentVersion
+
