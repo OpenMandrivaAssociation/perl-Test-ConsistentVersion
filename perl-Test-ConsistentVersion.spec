@@ -1,8 +1,8 @@
 %define upstream_name    Test-ConsistentVersion
-%define upstream_version v0.2.3
+%define upstream_version v0.3.1
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
+Version:    0.3.1
 Release:    1
 
 Summary:    Ensures distribution versions are consistent
@@ -24,12 +24,11 @@ authors to have consistent version numbers within the modules (as well as
 readme file and changelog) of the distribution.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{upstream_version}
+%__perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" --skipdeps </dev/null
 
 %build
-%{__perl} Build.PL installdirs=vendor
-
-./Build
+%make_build
 
 %check
 ./Build test
